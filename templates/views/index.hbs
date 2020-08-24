@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="../../public/img/weather.png">
+    </link>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content-container">
+        <h1>{{title}}</h1>
+        <div class="title-cities-container">
+            <div class="title-searchbar-container">
+                <p class="title">Use this site to get your weather!</p>
+                <div class="searchbar">
+                    <form>
+                        <div class="searchbar-container">
+                            <input placeholder="City, Country" id="searchbox">
+                            <button>Search</button>
+                        </div>
+                        <div id="searched-city" class="city-container" style="display: none"> 
+                            <div class="first-row">
+                                <p id="city-name"></p>
+                                <div class="icon-container">
+                                    <img id='search-city-icon'>
+                                </div>
+                            </div>
+                            <div class="city-weather-data">
+                                <span id="city-humidity" class="weather-data-row">
+                                </span>
+                                <span id="city-wind-speed" class="weather-data-row">
+                                </span>
+                                <span id="city-temperature" class="weather-data-row">
+                                </span>
+                            </div>
+                            <div id="links-container" class="links-container">
+                                <p id="link-bellow-message" class="link-bellow-message-container"></p>
+
+                                <a id="first-link" href={{firstLink}})>{{firstLinkName}}</a>
+                                <a id="second-link" href={{secondLink}}>{{secondLinkName}}</a>
+                                <a id="third-link" href={{thirdLink}}>{{thirdLinkName}}</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="cities-container">
+                <div class="city-container"> 
+                    <div class="first-row">
+                        <p>{{firstMainCityName}}</p>
+                        <div class="icon-container">
+                            <img src={{firstMainCityIconWeather}} width='80' height='80'>
+                        </div>
+                    </div>
+                    <div class="city-weather-data">
+                        <span class="weather-data-row">
+                            Humidity: {{firstMainCityHumidity}} 
+                        </span>
+                        <span class="weather-data-row">
+                            Wind Speed: {{firstMainCityWindSpeed}}
+                        </span>
+                        <span class="weather-data-row">
+                            Currently: {{firstMainCityWeather}} 
+                        </span>
+                    </div>
+                </div>
+                <div class="city-container">
+                    <div class="first-row">
+                        <p class="secondName">{{secondMainCityName}}</p>
+                        <div class="icon-container">
+                            <img src={{secondMainCityIconWeather}} width='80' height='80'>
+                        </div>
+                    </div>
+                        <div class="city-weather-data">
+                            <span class="weather-data-row">
+                                Humidity: {{secondMainCityHumidity}} 
+                            </span>
+                            <span class="weather-data-row">
+                                Wind Speed: {{secondMainCityWindSpeed}}
+                            </span>
+                            <span class="weather-data-row">
+                                Currently: {{secondMainCityWeather}} 
+                            </span>
+                        </div> 
+                </div>
+            </div>
+        </div>
+
+
+        {{>footer}}
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
